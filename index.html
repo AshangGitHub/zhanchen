@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.ico">
+  <title>展晨门窗 - 专业门窗定制</title>
+  <script src="./js/tailwindcss.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css"> -->
+  <link rel="stylesheet" href="./css/lucide.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css" />
+  <script src="./js/wow.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden">
+  <!-- Header -->
+  <header class="bg-white shadow-sm fixed w-full z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center space-x-2">
+          <img src="./image/logo.jpeg" alt="logo" class="mr-2 block rounded w-12 h-12">
+          <p class="text-2xl font-bold text-gray-800">展晨门窗</p>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-600 hover:text-blue-600">首页</a>
+          <a href="#products" class="text-gray-600 hover:text-blue-600">产品展示</a>
+          <a href="#about" class="text-gray-600 hover:text-blue-600">关于我们</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600">联系方式</a>
+        </nav>
+        <div class="flex items-center space-x-4 ml-6">
+          <i class="icon-phone text-blue-600"></i>
+          <a href="tel:17771599902" class="text-gray-600 hover:text-blue-600">17771599902</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 添加弹窗组件 -->
+  <div id="qrcodeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white rounded-lg p-8 max-w-sm w-full mx-4 relative animate__animated animate__fadeIn">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+        <i class="icon-x text-xl"></i>
+      </button>
+      <div class="text-center">
+        <img src="./image/qrcode.jpeg" alt="联系我们二维码" class="mx-auto w-48 h-48 mb-4">
+        <h3 class="text-xl font-semibold mb-2">联系我们</h3>
+        <p class="text-gray-600">扫码添加客服，获取更多产品信息</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-20">
+    <div class="relative h-[600px]">
+      <img src="./image/banner.jpeg" alt="Modern Building" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+        <div class="container mx-auto px-4">
+          <h1 class="text-white text-5xl font-bold mb-6 wow animate__animated animate__fadeInUp">展晨门窗</h1>
+          <h2 class="text-white text-4xl font-bold mb-6 wow animate__animated animate__fadeInUp">专业门窗定制，品质生活选择</h2>
+          <p class="text-white text-xl mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            20年专业制造经验，打造高品质门窗解决方案</p>
+          <button
+            onclick="showModal()"
+            class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.4s">
+            了解更多
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm wow animate__animated animate__fadeInUp">
+          <i class="icon-shield text-4xl text-blue-600 mb-4 block"></i>
+          <h3 class="text-xl font-semibold mb-2">品质保证</h3>
+          <p class="text-gray-600">采用优质原材料，严格质量把控，确保每一个产品都经得起时间考验</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+          <i class="icon-award text-4xl text-blue-600 mb-4 block"></i>
+          <h3 class="text-xl font-semibold mb-2">专业认证</h3>
+          <p class="text-gray-600">获得国家多项认证，是您值得信赖的门窗制造专家</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+          <i class="icon-thumbs-up text-4xl text-blue-600 mb-4 block"></i>
+          <h3 class="text-xl font-semibold mb-2">优质服务</h3>
+          <p class="text-gray-600">专业的售前售后团队，为您提供全方位的服务支持</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 scroll-margin-top-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 wow animate__animated animate__fadeInUp">产品展示</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group relative overflow-hidden rounded-lg wow animate__animated animate__fadeInLeft">
+          <img src="./image/doors-and-windows-img1.jpeg" alt="铝合金门窗"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+            <h3 class="text-white text-xl font-semibold">铝合金门窗</h3>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg wow animate__animated animate__fadeInUp">
+          <img src="./image/doors-and-windows-img2.jpeg" alt="断桥铝门窗"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+            <h3 class="text-white text-xl font-semibold">断桥铝门窗</h3>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg wow animate__animated animate__fadeInRight">
+          <img src="./image/doors-and-windows-img3.jpeg" alt="系统门窗"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+            <h3 class="text-white text-xl font-semibold">系统门窗</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-gray-50 scroll-margin-top-20">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 wow animate__animated animate__fadeInLeft">
+          <img src="./image/about-img.jpeg" alt="工厂展示" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 wow animate__animated animate__fadeInRight">
+          <h2 class="text-3xl font-bold mb-6">关于展晨门窗</h2>
+          <p class="text-gray-600 mb-4">
+            展晨门窗成立于2005年，是一家专注于高品质门窗研发、生产和销售的现代化企业。二十年来，我们始终坚持"质量第一、服务至上"的经营理念，为千万家庭提供优质的门窗产品。
+          </p>
+          <p class="text-gray-600 mb-4">
+            我们拥有先进的生产设备和专业的研发团队，产品已通过ISO9001质量管理体系认证，是行业内值得信赖的品牌。
+          </p>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="text-center wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+              <div class="text-3xl font-bold text-blue-600">20+</div>
+              <div class="text-gray-600">年行业经验</div>
+            </div>
+            <div class="text-center wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+              <div class="text-3xl font-bold text-blue-600">50000+</div>
+              <div class="text-gray-600">成功案例</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 scroll-margin-top-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 wow animate__animated animate__fadeInUp">联系我们</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="flex items-center space-x-4 wow animate__animated animate__fadeInUp">
+          <i class="icon-phone text-2xl text-blue-600"></i>
+          <div>
+            <h3 class="font-semibold">电话咨询</h3>
+            <a href="tel:17771599902" class="text-gray-600 hover:text-blue-600">17771599902</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+          <i class="icon-clock text-2xl text-blue-600"></i>
+          <div>
+            <h3 class="font-semibold">营业时间</h3>
+            <p class="text-gray-600">周一至周日 8:00-18:00</p>
+          </div>
+        </div>
+        <div class="text-center wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+          <div class="mb-2">
+            <img src="./image/qrcode.jpeg" alt="联系我们二维码"
+              class="mx-auto w-32 h-32">
+          </div>
+          <p class="text-gray-600">扫码添加客服</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-br from-gray-900 to-blue-900 text-white pt-20 pb-12 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('./image/footer-img.jpeg')] opacity-10 bg-cover bg-center"></div>
+    <div class="container mx-auto px-4 relative">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="wow animate__animated animate__fadeInLeft">
+          <div class="flex items-center space-x-3 mb-8">
+            <img src="./image/logo.jpeg" alt="logo" class="mr-1 block rounded w-12 h-12">
+            <div>
+              <h3 class="text-2xl font-bold">展晨门窗</h3>
+              <p class="text-blue-400">缔造品质生活</p>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-600/20 px-3 py-2 rounded-lg">
+                <i class="icon-map-pin text-xl text-blue-400"></i>
+              </div>
+              <p class="text-gray-300">湖北省仙桃市恒迪建材市场2期14栋1-107</p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-600/20 px-3 py-2 rounded-lg">
+                <i class="icon-phone text-xl text-blue-400"></i>
+              </div>
+              <a href="tel:17771599902" class="text-gray-300 hover:text-blue-600">17771599902</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 wow animate__animated animate__fadeInRight">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-white mb-2">20+</div>
+            <div class="text-blue-400">年专业经验</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-white mb-2">50k+</div>
+            <div class="text-blue-400">成功案例</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-white mb-2">100+</div>
+            <div class="text-blue-400">专利技术</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-white mb-2">98%</div>
+            <div class="text-blue-400">客户好评</div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-blue-800/50 text-center wow animate__animated animate__fadeInUp">
+        <div class="inline-flex items-center justify-center space-x-2 mb-4">
+          <i class="icon-shield text-blue-400"></i>
+          <span class="text-blue-400">ISO9001质量管理体系认证企业</span>
+        </div>
+        <p class="text-gray-400">© 2025 展晨门窗 版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    new WOW().init();
+
+    function showModal() {
+      const modal = document.getElementById('qrcodeModal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('qrcodeModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('qrcodeModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+  </script>
+
+  <style>
+    /* 强制显示滚动条，防止页面跳动 */
+    html {
+      overflow-y: scroll;
+    }
+
+    /* 如果你想隐藏滚动条但保持功能（可选） */
+    /* For Webkit browsers like Chrome/Safari */
+    html::-webkit-scrollbar {
+      width: 0;
+    }
+    
+    /* For Firefox */
+    html {
+      scrollbar-width: none;
+    }
+
+    section[id] {
+      scroll-margin-top: 2rem;
+    }
+
+    /* 定义新的颜色变量 */
+    :root {
+      --primary-color: #D83A56; /* 更淡雅的红色 */
+      --primary-dark: #B8324A; /* 深一点的淡红色 */
+      --primary-light: #E86A82; /* 浅一点的淡红色 */
+      --primary-very-light: rgba(216, 58, 86, 0.1); /* 半透明淡红色 */
+      --text-on-primary: #FFFFFF;
+    }
+
+    /* 替换所有蓝色相关的类 */
+    .text-blue-400 {
+      color: var(--primary-light) !important;
+    }
+    
+    .text-blue-600 {
+      color: var(--primary-color) !important;
+    }
+    
+    .text-blue-700 {
+      color: var(--primary-dark) !important;
+    }
+    
+    .bg-blue-600 {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .bg-blue-700 {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    .hover\:bg-blue-700:hover {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    .hover\:text-blue-600:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    .bg-blue-600\/20 {
+      background-color: var(--primary-very-light) !important;
+    }
+    
+    .border-blue-800\/50 {
+      border-color: rgba(197, 0, 15, 0.5) !important;
+    }
+    
+    /* 修改渐变背景 */
+    .bg-gradient-to-br.from-gray-900.to-blue-900 {
+      background-image: linear-gradient(to bottom right, #111827, #8B0000) !important;
+    }
+    
+    /* 修改按钮悬停效果 */
+    button.bg-blue-600:hover {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    /* 确保链接悬停效果一致 */
+    a:hover {
+      color: var(--primary-color);
+    }
+
+    /* 底部区域黑白色系调整 */
+    footer .text-blue-400 {
+      color: #FFFFFF !important;
+    }
+    
+    footer .bg-blue-600\/20 {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    footer .border-blue-800\/50 {
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    /* 修改渐变背景为纯黑色系 */
+    footer.bg-gradient-to-br.from-gray-900.to-blue-900 {
+      background-image: linear-gradient(to bottom right, #111827, #000000) !important;
+    }
+    
+    /* 底部链接悬停效果改为白色 */
+    footer a:hover {
+      color: #FFFFFF !important;
+    }
+    
+    /* 数据统计部分保持白色 */
+    footer .text-center .text-blue-400 {
+      color: #CCCCCC !important;
+    }
+    
+    /* ISO认证标识改为白色 */
+    footer .icon-shield.text-blue-400 + span.text-blue-400 {
+      color: #FFFFFF !important;
+    }
+
+    /* 增加底部背景图片的透明度 */
+    footer .absolute.inset-0 {
+      opacity: 0.2 !important; /* 将透明度从0.1提高到0.2 */
+    }
+
+    /* 添加弹窗动画样式 */
+    #qrcodeModal .animate__fadeIn {
+      animation-duration: 0.3s;
+    }
+  </style>
+</body>
+
+</html>
